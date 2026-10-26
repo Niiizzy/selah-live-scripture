@@ -1,0 +1,34 @@
+# Dependencies and generated build artifacts
+node_modules/
+**/node_modules/
+/downloads/
+/downloads*/
+**/downloads*/
+web-deploy/
+**/web-deploy/
+dist/
+release/
+*.zip
+*.exe
+*.asar
+*.blockmap
+*.log
+*.pdb
+
+# Local configuration and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+apibible-key.bin
+apibible-editions.json
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+Desktop.ini
+.vscode/
+.idea/

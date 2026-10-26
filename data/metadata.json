@@ -1,0 +1,25 @@
+{
+  "schema": 1,
+  "source": "Midvash bible-data (KJV, WEB, ASV, Almeida Livre); BibleAquifer ReinaValera1909",
+  "languages": [
+    "en",
+    "es",
+    "pt"
+  ],
+  "translations": {
+    "KJV": "King James Version",
+    "WEB": "World English Bible",
+    "ASV": "American Standard Version",
+    "RVR09": "Reina-Valera 1909",
+    "ALMEIDA": "Almeida 1819 (Bíblia Livre)"
+  },
+  "books": 66,
+  "verses": 31102,
+  "verseCounts": {
+    "KJV": 31102,
+    "WEB": 31095,
+    "ASV": 31086,
+    "RVR09": 31084,
+    "ALMEIDA": 31102
+  }
+}

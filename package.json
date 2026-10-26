@@ -1,0 +1,63 @@
+{
+  "name": "selah-live-scripture",
+  "version": "1.0.0",
+  "description": "Local-first live Scripture presentation for churches",
+  "author": "Selah",
+  "license": "UNLICENSED",
+  "main": "main.cjs",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win nsis",
+    "dist:portable": "electron-builder --win portable",
+    "portable": "powershell -NoProfile -ExecutionPolicy Bypass -File package-portable.ps1"
+  },
+  "devDependencies": {
+    "electron": "45.0.0",
+    "electron-builder": "26.18.0"
+  },
+  "build": {
+    "appId": "org.selah.live-scripture",
+    "productName": "Selah Live Scripture",
+    "asar": true,
+    "directories": {
+      "output": "downloads-api-bible-release"
+    },
+    "files": [
+      "main.cjs",
+      "index.html",
+      "styles.css",
+      "app.js",
+      "projector.html",
+      "manifest.json",
+      "icon.svg",
+      "icon.ico",
+      "sw.js",
+      "README.md",
+      "USER_GUIDE.md",
+      "data/**/*",
+      "vendor/**/*",
+      "DOWNLOAD.md",
+      "package.json"
+    ],
+    "win": {
+      "icon": "icon.ico",
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "artifactName": "Selah-Setup-${version}-Windows-x64.${ext}"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Selah Live Scripture"
+    },
+    "electronDist": "node_modules/electron/dist"
+  }
+}
