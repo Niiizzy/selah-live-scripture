@@ -11,6 +11,7 @@ The hosted web app is public. Each browser keeps its own church name, settings, 
 ## Features
 
 - Live sermon captions using local Whisper speech recognition on the device.
+- A local audio gate skips silence, low-level noise, and low-frequency rumble before Whisper; it cannot identify one speaker or filter out nearby speech.
 - Browser speech recognition as an optional fallback where supported. That fallback may use the browser vendor’s online speech service.
 - Spoken scripture reference detection in English, Spanish, and Portuguese, including localized book names and spoken forms such as “John chapter three, verse sixteen,” “Juan 3:16,” and “João 3:16.”
 - Text matching against five bundled offline editions: King James Version (KJV), World English Bible (WEB), American Standard Version (ASV), Reina-Valera 1909 (RVR09), and Almeida 1819.
@@ -35,7 +36,7 @@ The web app is a static site. It cannot securely store a shared API key or provi
 
 Open the live URL above in a current version of Chrome or Edge. Allow microphone access when prompted. The hosted app requires an HTTPS origin for microphone access and the service worker. Internet is needed for the initial page load and to prepare speech models. Once the app and required model weights are cached, portions can continue offline in that browser profile.
 
-For a church service, connect a clean aux/monitor output from the sound mixer to the media laptop when possible. Select the correct microphone under Settings, test the input with a spoken verse, then open the projector window on the extended display. Avoid relying on a microphone that mostly hears congregation noise or room playback.
+For a church service, connect a clean aux/monitor output from the sound mixer to the media laptop when possible. Select the correct microphone under Settings, test the input with a spoken verse, then open the projector window on the extended display. The local gate filters silence and low-level rumble; it does not separate the preacher from other people speaking nearby. Use a close or directional microphone and keep automatic projection off until the room setup is proven.
 
 ## Run from source
 

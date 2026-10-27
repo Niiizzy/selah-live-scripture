@@ -15,7 +15,7 @@ For repeated use, bookmark the local address. Selah’s service worker caches th
 
 ## During the service
 
-- Selah listens in short two-second audio windows and transcribes with Whisper on the device. It does not write sermon audio to disk.
+- Selah listens in short two-second audio windows and transcribes with Whisper on the device. A local level gate skips silence, low-level noise, and low-frequency rumble. It cannot distinguish the preacher from other nearby voices. It does not write sermon audio to disk.
 - It detects spoken Bible references in English, Spanish, and Portuguese, including forms such as “John chapter three, verse sixteen,” “Juan 3:16,” and “João 3:16.”
 - It checks loaded Bible editions for the closest wording. A multilingual sentence model reranks likely passages for paraphrases. The model is a retrieval aid; review uncertain matches, especially while commissioning room audio.
 - If a preacher names a Bible edition, Selah selects it only when its text is loaded. For NLT or MSG, connect your own API.Bible account and select licenses for those editions. The downloadable desktop app fetches verses on demand while online; it does not include or export complete NLT/MSG files. The API key is stored encrypted on that computer.
